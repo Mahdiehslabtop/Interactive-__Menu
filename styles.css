@@ -1,0 +1,212 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #e1e6eb;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Add transition for background color */
+}
+.bg-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("http://unsplash.it/1200x800") center center no-repeat;
+  background-size: cover;
+}
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #745d9e, #b2d6e0);
+  opacity: 0.6;
+}
+#header-content {
+  text-align: center;
+  position: fixed; /* Keep the header fixed at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+#header-content .name {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#header-content .student-id {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#header-content .social-links a {
+  text-decoration: none;
+  color: #000000; /* LinkedIn color */
+  margin: 0 10px;
+}
+
+#header-content .social-links a:hover {
+  color: #0030cc; /* LinkedIn hover color */
+}
+
+#header-content .social-links a.instagram {
+  color: #000000; /* Instagram color */
+}
+
+#header-content .social-links a.instagram:hover {
+  color: #000cb3; /* Instagram hover color */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-wrapper {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Ensure full width */
+  background-color: #abc6e3;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.floating-action-button {
+  width: 60px;
+  height: 60px;
+  color: rgb(245, 237, 237);
+  font-size: 30px;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.share-btn {
+  position: absolute;
+  top: 2px; /* Adjusted to position button slightly lower */
+  right: 0; /* Positioned to the right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #d10000;
+  border-radius: 40px;
+  box-shadow: 0px 2px 17px -1px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#share-icon {
+  display: block;
+}
+
+#close-icon {
+  display: none;
+}
+
+.share-btn.active #share-icon {
+  display: none;
+}
+
+.share-btn.active #close-icon {
+  display: block;
+}
+
+ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f7;
+  color: black;
+  list-style-type: none;
+  transform: scale(0.95);
+  transition: 0.5s;
+  border-radius: 40px;
+}
+
+ul.active li:hover {
+  background-color: #ff4500; /* Default hover color */
+}
+
+ul.active li:nth-child(1):hover {
+  background-color: #ffd700; /* Yellow */
+}
+
+ul.active li:nth-child(2):hover {
+  background-color: #9434e6; /* Purple */
+}
+
+ul.active li:nth-child(3):hover {
+  background-color: #ff4500; /* Red */
+}
+
+ul.active li:nth-child(4):hover {
+  background-color: #ff69b4; /* Pink */
+}
+
+ul.active li:nth-child(5):hover {
+  background-color: #1e90ff; /* Blue */
+}
+
+ul.active li:nth-child(1) {
+  top: 100%;
+  left: 100%;
+  transition-delay: 0.1s;
+}
+
+ul.active li:nth-child(2) {
+  top: 100%;
+  left: 0%;
+  transition-delay: 0.2s;
+}
+
+ul.active li:nth-child(3) {
+  top: 100%;
+  left: -100%;
+  transition-delay: 0.3s;
+}
+
+ul.active li:nth-child(4) {
+  top: 0%;
+  left: -100%;
+  transition-delay: 0.4s;
+}
+
+ul.active li:nth-child(5) {
+  top: -100%;
+  left: -100%;
+  transition-delay: 0.5s;
+}
+
+ion-icon {
+  font-size: 18px;
+  transform: rotate(-45deg);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
